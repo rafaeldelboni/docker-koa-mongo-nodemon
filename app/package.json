@@ -1,0 +1,35 @@
+{
+  "name": "koa-mongodb-example",
+  "version": "0.9.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elzair/koa-mongodb-example"
+  },
+  "description": "Simple example of a multi-file CRUD app using Koa and MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --harmony index.js",
+    "start": "nodemon -L --harmony app/index.js"
+  },
+  "keywords": [
+    "koa",
+    "test"
+  ],
+  "author": "Philip Woods",
+  "license": "ISC",
+  "dependencies": {
+    "co-body": "0.0.1",
+    "co-monk": "^1.0.0",
+    "co-views": "^0.2.0",
+    "koa": "^0.5.5",
+    "koa-logger": "^1.2.2",
+    "koa-route": "^1.1.4",
+    "koa-static": "^1.4.9",
+    "koa-stylus": "0.0.3",
+    "monk": "^0.8.1",
+    "swig": "^1.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "~1.0.17"
+  }
+}
