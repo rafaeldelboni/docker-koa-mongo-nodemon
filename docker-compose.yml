@@ -8,8 +8,12 @@ services:
       - "3030:3000"
     links:
       - "db:mongo"
+    environment:
+      - TEST=TEST
   db:
     image: mongo
+    ports:
+      - "27017:27017"
     volumes:
       - "dbdata:/data/db"
 volumes:

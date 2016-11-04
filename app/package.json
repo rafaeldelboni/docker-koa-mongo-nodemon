@@ -8,8 +8,8 @@
   "description": "Simple example of a multi-file CRUD app using Koa and MongoDB.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon -L --debug --harmony index.js",
-    "start": "nodemon -L --debug --harmony app/index.js"
+    "test": "nodemon -L --debug --harmony app/index.js",
+    "start": "node app/index.js"
   },
   "keywords": [
     "koa",
@@ -30,6 +30,6 @@
     "swig": "^1.3.2"
   },
   "devDependencies": {
-    "nodemon": "~1.0.17"
+    "nodemon": "*"
   }
 }
