@@ -1,11 +1,17 @@
-web:
-  build: .
-  volumes:
-    - "./app:/src/app"
-  ports:
-    - "3030:3000"
-  links:
-    - "db:mongo"
-
-db:
-  image: mongo
+version: '2'
+services:
+  web:
+    build: .
+    volumes:
+      - "./app:/src/app"
+    ports:
+      - "3030:3000"
+    links:
+      - "db:mongo"
+  db:
+    image: mongo
+    volumes:
+      - "dbdata:/data/db"
+volumes:
+  dbdata:
+    driver: local

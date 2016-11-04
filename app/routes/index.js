@@ -10,9 +10,15 @@ var parse  = require('co-body')
  * Item List.
  */
 exports.list = function *() {
-  var results = yield todos.find({});
-  console.log(results);
-  this.body = yield render('index', {todos: results});
+  try {
+    var results = yield todos.find({});
+    console.log(results);
+    this.body = yield render('index', {todos: results});
+  } catch (err) {
+    this.status = err.status || 500;
+    this.body = err.message;
+    this.app.emit('error', err, this);
+  }
 };
 
 /**
