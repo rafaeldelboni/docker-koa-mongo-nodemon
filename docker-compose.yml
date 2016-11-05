@@ -9,7 +9,7 @@ services:
     links:
       - "db:mongo"
     environment:
-      - TEST=TEST
+      - "TEST=${TEST}"
   db:
     image: mongo
     ports:
