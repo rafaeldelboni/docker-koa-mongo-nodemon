@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon -L --debug --harmony app/index.js",
-    "start": "node app/index.js"
+    "start": "node --harmony app/index.js"
   },
   "keywords": [
     "koa",

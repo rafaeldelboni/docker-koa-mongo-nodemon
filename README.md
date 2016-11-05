@@ -15,7 +15,10 @@ Run `docker-compose build`. It will
 * instruct the container to execute `run.sh` script on start up.
 
 ## Start
+### MAC / LINUX
+Run `TEST= docker-compose up` to create and start both `app` and `db` container. The api should then be running on your docker daemon on port 3030.  
+Run `TEST=DO docker-compose up` to create and start both `app` and `db` container. The api should execute the `npm run test` inside the `package.json` file.  
 
-Run `docker-compose up` to create and start both `app` and `db` container. The api should then be running on your docker daemon on port 3030.
-
-Run `TEST=DO docker-compose up` to create and start both `app` and `db` container. The api should execute the `npm run test` inside the `package.json` file.
+### WINDOWS (Powershell)
+Run `$env:TEST="";docker-compose up` to create and start both `app` and `db` container. The api should then be running on your docker daemon on port 3030.  
+Run `$env:TEST="do";docker-compose up` to create and start both `app` and `db` container. The api should execute the `npm run test` inside the `package.json` file.  
